@@ -1,0 +1,56 @@
+/* ===== GRID BACKGROUND ===== */
+
+/* পুরো page এ 10px × 10px grid বানানো হয়েছে */
+body {
+    background-image: linear-gradient(to right, #ccc 1px, transparent 1px),
+                     linear-gradient(to bottom, #ccc 1px, transparent 1px);
+
+    /* প্রতিটা square = 10px */
+    background-size: 10px 10px;
+}
+
+
+/* ===== CONTAINER BOX ===== */
+
+.container {
+    /* width = 300px → 30 grid squares */
+    width: 300px;
+
+    /* height = 200px → 20 grid squares */
+    height: 200px;
+
+    border: 2px solid black;
+
+    /* inner box কে position করার জন্য */
+    position: relative;
+}
+
+
+/* ===== INNER BOX ===== */
+
+.inner-box {
+
+    /* width = 100px → 10 grid squares */
+    width: 100px;
+
+    /* height = 50px → 5 grid squares */
+    height: 50px;
+
+    background-color: lightblue;
+    border: 1px solid black;
+
+    /* container এর ভিতরে absolute positioning */
+    position: absolute;
+
+    /* নিচ থেকে 10px (1 grid square) */
+    bottom: 10px;
+
+    /* ডান থেকে 10px (1 grid square) */
+    right: 10px;
+
+    /* text center করার জন্য */
+    text-align: center;
+
+    /* vertically center */
+    line-height: 50px;
+}
